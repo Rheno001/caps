@@ -6,7 +6,7 @@ function Navbar() {
     const[isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (  
-        <header className="bg-green-800 flex  items-center justify-between text-white py-2 px-28 md:px-52 drop-shadow-md md:fixed w-full top-0">
+        <header className="bg-green-800 flex  items-center justify-between text-white py-2 px-24 md:px-52 drop-shadow-md md:fixed w-full top-0">
             <div className="flex items-center justify-center"><a href="#"><img src="./assets/logo.jpg" alt="" className="w-12 hover:scale-105 transition-all"/></a><p className="font-bold">CAPS</p></div>
             <ul className="hidden xl:flex items-center gap-10 font-medium text-base">
                 <li className="p-3 hover:underline underline-offset-2 cursor-pointer transition-all"><Link activeClass="active" 

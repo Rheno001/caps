@@ -25,7 +25,7 @@ export default function Carousel({slides}) {
         })}
        </div>
 
-       <div className="absolute px-5 top-0 h-full w-full justify-between flex text-white text-5xl items-end">
+       <div className="absolute px-5 top-0 h-full w-full justify-between flex text-white text-3xl items-center">
         <button onClick={previousSlide}>
         <FaArrowAltCircleLeft />
         </button>
