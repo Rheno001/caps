@@ -1,7 +1,21 @@
-import './App.css';
+
+import { motion } from "framer-motion";
 import Navbar from './components/Navbar';
+import Carousel from './components/Carousel';
+
 
 function App() {
+    let slides = [
+        "./assets/IMG1.jpg",
+        "./assets/IMG2.jpg",
+        "./assets/IMG3.jpg",
+        "./assets/IMG4.jpg",
+        "./assets/IMG5.jpg",
+        "./assets/IMG6.jpg",
+        
+    ];
+    const text = "Welcome to Christian Assets Private Schools".split(" ");
+    const text1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, id optio voluptate temporibus ab veniam magni vitae totam molestiae accusamus!".split(" ");
   return (
     <div>
       <Navbar/>
@@ -9,8 +23,12 @@ function App() {
             <div className="flex flex-col-reverse items-center justify-center px-12 lg:flex-row lg:px-28 pt-12 pb-16">
                 <div className="flex flex-col items-center justify-center sm:flex lg:items-start writeup mr-4">
                     <div className="text-center lg:text-start">
-                        <h1 className="text-2xl md:text-5xl font-bold my-2 text-green-800">Christain assets Private schools</h1>
-                        <p className="my-2 text-green-600 text-sm md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, id optio voluptate temporibus ab veniam magni vitae totam molestiae accusamus!</p>
+                      <div className="text-2xl md:text-5xl font-bold my-2 text-green-800">
+                        {text.map((el, i) => (<motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                        transition={{duration: 3, delay: i / 10 }} key={i}>{el}{" "}</motion.span>))}</div>
+                        <div className="my-2 text-green-600 text-sm md:text-lg">
+                        {text1.map((el, i) => (<motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                        transition={{duration: 4, delay: i / 10 }} key={i}>{el}{" "}</motion.span>))}</div>
                     </div>
                     <div className="btn">
                         <button className="btn rounded-3xl py-4 px-6 self-center duration-300 bg-green-800 text-white font-bold hover:text-green-800 hover:bg-white hover:scale-105 text-sm md:text-lg">Contact Us</button>
@@ -62,60 +80,9 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
 
         <section id="gallery" className="border-b-2 px-0 py-10 flex flex-col items-center justify-center">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">Gallery</h2>
-               
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./assets/IMG1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-    </div>
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-
-
-
-
-
-
-
-
-
-
-    
+            <div className='w-[80%] mx-auto mt-8 duration-300'>
+                <Carousel slides={slides}/>
+            </div>        
         </section>
         <section id="newsletter" className="px-12 md:px-52 py-10 flex flex-col items-center justify-center">
             <div className="flex flex-col items-center justify-center">
@@ -123,7 +90,6 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
                 <p>COMING SOON!!!</p>
             </div>
             <div><img src="./assets/school-time-fun-colorful-school-supplies-characters-vector-illustration-cartoon-clipart_1256803-1036.jpg" alt=""/></div>
-           
     
         </section>
         <footer>
