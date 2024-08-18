@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 
 function App() {
@@ -78,9 +81,9 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
             <div><img src="./assets/back-school-clipart_703032-4663.jpg" alt=""/></div>
         </section>
 
-        <section id="gallery" className="border-b-2 px-0 py-10 flex flex-col items-center justify-center">
+        <section id="gallery" className="border-b-2 px-0 pb-0 pt-2 flex flex-col items-center justify-center">
             <h2 className="text-2xl md:text-3xl font-bold text-green-800">Gallery</h2>
-            <div className='w-[80%] mx-auto mt-8 duration-300'>
+            <div className='w-[95%] mx-auto mt-2 duration-300'>
                 <Carousel slides={slides}/>
             </div>        
         </section>
@@ -97,9 +100,9 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
                 <div className="flex flex-col items-center">
                     <div className="flex items-center text-white font-bold text-xl justify-start"><img src="./assets/logo.jpg" alt="caps logo" className="w-10 rounded-2xl mr-3"/>CAPS</div>
                     <ul>
-                        <li className="mx-5 duration-300 text-white hover:underline underline-offset-2"><i className="fa-solid fa-phone mr-2 text-white"></i>08037142291</li>
-                        <li className="mx-5 duration-300 text-white cursor-pointer"><a href="#newsletter"><i className="fa-solid fa-envelope mr-2 text-white"></i></a>Newsletter</li>
-                        <li className="mx-5 duration-300 text-white hover:underline underline-offset-2"><a href="https://www.google.com/maps/place/9%C2%B055'59.6%22N+8%C2%B054'45.5%22E/@9.933217,8.9080306,17z/data=!3m1!4b1!4m12!1m7!3m6!1s0x10537224a1b29681:0x1a757fa6b0b02791!2sBush+Bar!8m2!3d9.9336187!4d8.9148117!16s%2Fg%2F11by_p3wgt!3m3!8m2!3d9.933217!4d8.912644?entry=ttu"><i className="fa-duotone fa-solid fa-map-pin mr-2 text-white"></i>Address</a></li>
+                        <li className="flex items-center mx-5 duration-300 text-white hover:underline underline-offset-2"><BsFillTelephoneFill />-08037142291</li>
+                        <li className="flex items-center mx-5 duration-300 text-white cursor-pointer"><a href="#newsletter"><MdEmail /></a>-Newsletter</li>
+                        <li className="flex items-center mx-5 duration-300 text-white hover:underline underline-offset-2"><a href="https://www.google.com/maps/place/9%C2%B055'59.6%22N+8%C2%B054'45.5%22E/@9.933217,8.9080306,17z/data=!3m1!4b1!4m12!1m7!3m6!1s0x10537224a1b29681:0x1a757fa6b0b02791!2sBush+Bar!8m2!3d9.9336187!4d8.9148117!16s%2Fg%2F11by_p3wgt!3m3!8m2!3d9.933217!4d8.912644?entry=ttu"><FaLocationDot /></a>-Address</li>
                     </ul>
                 </div>
                 <div className="hours text-white text-center">
@@ -114,8 +117,7 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
                 </div>
             </section>
             <div className="copyright bg-green-800 flex flex-col items-center justify-center text-white pb-8">
-                <p className="text-sm text-center">Copyright &#169 2024 Christian Assets Private School. All rights reserved</p>
-                <p className="mt-2">Developed by <a href="https://reno-ten.vercel.app/">Reno</a></p>
+                <p className="text-sm text-center">Copyright 2024 Christian Assets Private School. All rights reserved</p>
             </div>
         </footer>
     </div>
