@@ -5,6 +5,7 @@ import Carousel from './components/Carousel';
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import {ContactUs} from './components/ContactUs';
 
 
 function App() {
@@ -70,20 +71,14 @@ function App() {
         <section id="contact" className="px-12 md:px-52 py-10 border-b-2 flex flex-col-reverse md:flex-row items-center justify-center">
             <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-green-800">Book an Appointment</h2>
-                <form action="https://formcarry.com/s/{Your Form ID}"
-method="POST" enctype="multipart/form-data" class="flex flex-col items-center justify-evenly md:flex-wrap border-2 rounded-lg border-green-800 py-2"> 
-                    <input className="mt-5 px-5 py-2 border-2" type="text" placeholder="Full Name..."/>
-                    <input className="mt-5 px-5 py-2 border-2" type="email" name="" id="" placeholder='Email Address...' />
-                    <textarea name="message" placeholder='Type your Message...' className="mt-5 px-5 py-2 border-2"></textarea>
-                    <input className="mt-5 px-5 py-2 border-2" type="date" name="" id=""/>
-                </form>
+                <ContactUs/>
             </div>  
             <div><img src="./assets/back-school-clipart_703032-4663.jpg" alt=""/></div>
         </section>
 
-        <section id="gallery" className="border-b-2 px-0 pb-0 pt-2 flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-800">Gallery</h2>
-            <div className='w-[95%] mx-auto mt-2 duration-300'>
+        <section id="gallery" className="border-b-2 px-0 pb-0 pt-0 md:pt-2 flex flex-col items-center justify-center">
+            <h2 className="hidden md:block text-2xl md:text-3xl font-bold text-green-800">Gallery</h2>
+            <div className='w-[100%] md:w-[95%] mx-auto mt-0 md:mt-2 duration-300'>
                 <Carousel slides={slides}/>
             </div>        
         </section>
@@ -96,22 +91,26 @@ method="POST" enctype="multipart/form-data" class="flex flex-col items-center ju
     
         </section>
         <footer>
-            <section id="footerlinks" className="bg-green-800 px-8 md:px-52 py-10 flex items-center justify-between md:justify-evenly">
+            <section id="footerlinks" className="bg-green-800 flex flex-col lg:flex-row items-center justify-between md:justify-evenly px-8 md:px-52 py-10">
                 <div className="flex flex-col items-center">
                     <div className="flex items-center text-white font-bold text-xl justify-start"><img src="./assets/logo.jpg" alt="caps logo" className="w-10 rounded-2xl mr-3"/>CAPS</div>
                     <ul>
                         <li className="flex items-center mx-5 duration-300 text-white hover:underline underline-offset-2"><BsFillTelephoneFill />-08037142291</li>
-                        <li className="flex items-center mx-5 duration-300 text-white cursor-pointer"><a href="#newsletter"><MdEmail /></a>-Newsletter</li>
                         <li className="flex items-center mx-5 duration-300 text-white hover:underline underline-offset-2"><a href="https://www.google.com/maps/place/9%C2%B055'59.6%22N+8%C2%B054'45.5%22E/@9.933217,8.9080306,17z/data=!3m1!4b1!4m12!1m7!3m6!1s0x10537224a1b29681:0x1a757fa6b0b02791!2sBush+Bar!8m2!3d9.9336187!4d8.9148117!16s%2Fg%2F11by_p3wgt!3m3!8m2!3d9.933217!4d8.912644?entry=ttu"><FaLocationDot /></a>-Address</li>
                     </ul>
+                </div>
+                <div className="newsletter flex flex-col items-center justify-between my-3 sm:mt-0">
+                    <h2 className="hidden sm:block  text-white text-lg font-medium">Newsletter</h2>
+                    <div className="flex items-center justify-between">
+                    <button className="flex items-center justify-center w-[30%] btn rounded-3xl py-2 px-4 self-center duration-300 bg-white text-green-800 font-bold hover:text-green-800 hover:bg-gray-100 hover:scale-105 text-sm mt-2 mb-2"><MdEmail />Subscribe</button>
+                    <input type="email" className="px-2 py-2 ml-2 w-[70%] rounded-md" placeholder="Enter your Email..."  id="" />
+                    </div>
+                   
                 </div>
                 <div className="hours text-white text-center">
                     <h3 className="text-center text-xl md:text-2xl">Opening Hours</h3>
                     <ul className="opening">
-                        <li>Monday: 8AM-2PM</li>
-                        <li>Tuesday: 8AM-2PM</li>
-                        <li>Wednesday: 8AM-2PM</li>
-                        <li>Thursday: 8AM-2PM</li>
+                        <li>Monday - Thursday: 8AM-2PM</li>
                         <li>Friday: 8AM-1PM</li>
                     </ul>
                 </div>
